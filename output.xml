@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170519 16:23:33.629" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
+<suite source="D:\robotframework\taxform.robot" id="s1" name="Taxform">
+<test id="s1-t1" name="Test Dialog">
+<kw name="Open Efiling Page">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://epit.rd.go.th/publish/index.php</arg>
+<arg>browser=gc</arg>
+</arguments>
+<msg timestamp="20170519 16:23:33.824" level="INFO">Opening browser 'gc' to base url 'http://epit.rd.go.th/publish/index.php'</msg>
+<status status="PASS" endtime="20170519 16:23:38.979" starttime="20170519 16:23:33.823"></status>
+</kw>
+<status status="PASS" endtime="20170519 16:23:38.979" starttime="20170519 16:23:33.823"></status>
+</kw>
+<kw name="Forget Password">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="box1"]/div[2]/ul/li[4]/a</arg>
+</arguments>
+<msg timestamp="20170519 16:23:38.982" level="INFO">Clicking element 'xpath=//*[@id="box1"]/div[2]/ul/li[4]/a'.</msg>
+<status status="PASS" endtime="20170519 16:23:40.887" starttime="20170519 16:23:38.981"></status>
+</kw>
+<status status="PASS" endtime="20170519 16:23:40.887" starttime="20170519 16:23:38.980"></status>
+</kw>
+<kw name="Set New Password">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="form1"]/table[2]/tbody/tr[2]/td[2]/a</arg>
+</arguments>
+<msg timestamp="20170519 16:23:40.888" level="INFO">Clicking element 'xpath=//*[@id="form1"]/table[2]/tbody/tr[2]/td[2]/a'.</msg>
+<status status="PASS" endtime="20170519 16:23:42.662" starttime="20170519 16:23:40.888"></status>
+</kw>
+<status status="PASS" endtime="20170519 16:23:42.663" starttime="20170519 16:23:40.887"></status>
+</kw>
+<kw name="Click OK">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="bOK1"]</arg>
+</arguments>
+<msg timestamp="20170519 16:23:42.665" level="INFO">Clicking element 'xpath=//*[@id="bOK1"]'.</msg>
+<status status="PASS" endtime="20170519 16:23:42.773" starttime="20170519 16:23:42.664"></status>
+</kw>
+<status status="PASS" endtime="20170519 16:23:42.774" starttime="20170519 16:23:42.664"></status>
+</kw>
+<kw name="Check Dialog">
+<kw name="Get Alert Message" library="Selenium2Library">
+<doc>Returns the text of current JavaScript alert.</doc>
+<assign>
+<var>${message}</var>
+</assign>
+<msg timestamp="20170519 16:23:42.788" level="INFO">${message} = ข้อความปฏิเสธ [E011] :  กรุณาบันทึกทึกเลขประจำตัวผู้เสียภาษีอากร</msg>
+<status status="PASS" endtime="20170519 16:23:42.788" starttime="20170519 16:23:42.775"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${message}</arg>
+<arg>[E011]</arg>
+</arguments>
+<status status="PASS" endtime="20170519 16:23:42.789" starttime="20170519 16:23:42.788"></status>
+</kw>
+<status status="PASS" endtime="20170519 16:23:42.789" starttime="20170519 16:23:42.774"></status>
+</kw>
+<kw name="Click Cancel from dialog">
+<kw name="Choose Cancel On Next Confirmation" library="Selenium2Library">
+<doc>Cancel will be selected the next time `Confirm Action` is used.</doc>
+<status status="PASS" endtime="20170519 16:23:42.790" starttime="20170519 16:23:42.790"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="bExit1"]</arg>
+</arguments>
+<msg timestamp="20170519 16:23:42.791" level="INFO">Clicking element 'xpath=//*[@id="bExit1"]'.</msg>
+<status status="PASS" endtime="20170519 16:23:42.951" starttime="20170519 16:23:42.791"></status>
+</kw>
+<kw name="Confirm Action" library="Selenium2Library">
+<doc>Dismisses currently shown confirmation dialog and returns it's message.</doc>
+<status status="PASS" endtime="20170519 16:23:42.969" starttime="20170519 16:23:42.951"></status>
+</kw>
+<status status="PASS" endtime="20170519 16:23:42.970" starttime="20170519 16:23:42.789"></status>
+</kw>
+<kw name="Accept confirm dialog">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="bExit1"]</arg>
+</arguments>
+<msg timestamp="20170519 16:23:42.971" level="INFO">Clicking element 'xpath=//*[@id="bExit1"]'.</msg>
+<status status="PASS" endtime="20170519 16:23:43.065" starttime="20170519 16:23:42.971"></status>
+</kw>
+<kw name="Confirm Action" library="Selenium2Library">
+<doc>Dismisses currently shown confirmation dialog and returns it's message.</doc>
+<status status="PASS" endtime="20170519 16:23:43.080" starttime="20170519 16:23:43.065"></status>
+</kw>
+<status status="PASS" endtime="20170519 16:23:43.081" starttime="20170519 16:23:42.970"></status>
+</kw>
+<status status="PASS" endtime="20170519 16:23:43.082" critical="yes" starttime="20170519 16:23:33.822"></status>
+</test>
+<status status="PASS" endtime="20170519 16:23:43.085" starttime="20170519 16:23:33.632"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Taxform" pass="1">Taxform</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
